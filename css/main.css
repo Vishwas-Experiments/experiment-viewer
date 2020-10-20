@@ -1,0 +1,29 @@
+body {
+  background-color: #000f17;
+  color: #FFF;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  margin: 20px;
+}
+
+h3 {
+  margin: -20px 0 40px 20px;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type:;
+}
+
+a {
+  color: #FFF;
+  display: block;
+}
+
+a:hover {
+  margin-left: 2px;
+  font-weight: 600;
+}
