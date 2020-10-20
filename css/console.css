@@ -1,0 +1,10 @@
+textarea#console {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  width: calc(100% - 50px) !important;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: #FFF;
+  padding: 0 20px;
+}
