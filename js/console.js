@@ -1,7 +1,9 @@
 let consoleInput = null;
 
 let writeToConsole = content => {
-  document.getElementById('console').value += content;
+  let consoleOutput = document.getElementById('console');
+  consoleOutput.value += content;
+  consoleOutput.scrollTo(0, consoleOutput.scrollHeight);
 }
 
 let initConsoleInput = () => {
