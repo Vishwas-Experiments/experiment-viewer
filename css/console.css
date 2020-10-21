@@ -1,10 +1,49 @@
+h3 {
+  margin: -20px 0 40px 0;
+  font-weight: 400;
+}
+
+#page__container {
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    height: 100vh;
+    margin: 0 20px;
+}
+
 textarea#console {
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
-  width: calc(100% - 50px) !important;
+  width: 100% !important;
+  height: 100% !important;
   background: transparent;
   outline: none;
   border: 0;
   color: #FFF;
-  padding: 0 20px;
+}
+
+#console-input__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#console-input__container > p {
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#console-input {
+  flex-grow: 2;
+  height: 100%;
+  padding: 0;
+  background: 0;
+  outline: 0;
+  border: 0;
+  color: #FFF;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  margin-left: 10px;
 }
