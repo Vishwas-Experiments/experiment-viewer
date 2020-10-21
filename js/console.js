@@ -1,43 +1,34 @@
-let loadWasm = async url => {
-  let response = await (await fetch(url));
-  let wasmBuffer = await response.arrayBuffer();
-  let wasmModule = await WebAssembly.compile(wasmBuffer);
-  console.log(wasmModule);
-  return new WebAssembly.Instance(wasmModule, {
-    'cout': function(text) { alert('stdout: ' + text) },
-  });
-}
-
-let overridePrompt = () => {
-  let originalPrompt = window.prompt;
-  window.prompt = (...args) => {
-    let res = originalPrompt.apply(undefined, args);
-    if(res)
-      writeToConsole(res + '\n');
-    return res;
-  }
-}
+let consoleInput = null;
 
 let writeToConsole = content => {
   document.getElementById('console').value += content;
 }
 
+let initConsoleInput = () => {
+  let consoleInputElem = document.getElementById('console-input');
+  consoleInputElem.focus();
+  consoleInputElem.addEventListener('change', e => {
+    consoleInput = consoleInputElem.value;
+  })
+}
+
+let flushConsoleInput = () => {
+  writeToConsole(consoleInput + '\n');
+  consoleInput = null;
+  document.getElementById('console-input').value = '';
+}
+
+let addWasmLoaders = url => {
+  let script = document.createElement('SCRIPT');
+  script.setAttribute('src', `wasm/${url}/script.js`);
+  document.body.appendChild(script);
+}
+
 let initPage = projectName => {
   document.getElementById('project-name').innerText = projectName || 'untitled project';
   let consoleDisplay = document.getElementById('console');
-  consoleDisplay.style.height = `${window.innerHeight - consoleDisplay.getBoundingClientRect().top - 30}px`;
-  overridePrompt();
+  initConsoleInput();
+  addWasmLoaders(projectName);
 }
 
 initPage(window.location.hash.slice(1));
-
-var wasmBinaryFile = '../wasm/sum-of-digits.wasm';
-var Module = {
-  preRun: [],
-  postRun: [],
-  print: writeToConsole,
-  printErr: function(text) {
-    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-      console.error(text);
-  }
-};
