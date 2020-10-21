@@ -5,8 +5,33 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
+#index__container {
+  height: calc(100vh - 40px);
+  margin: 0 20px;
+}
+
 ul {
-  list-style-type:;
+  list-style-type: square;
+}
+
+li {
+  margin: 5px 0;
+}
+
+#project-list {
+  padding: 0;
+}
+
+.take-home__title {
+  list-style-type: none;
+  margin: 15px 0 5px 0;
+  font-size: 18px;
+}
+
+.project-month {
+  font-size: 20px;
+  font-weight: 600;
+  list-style-type: none;
 }
 
 a {
