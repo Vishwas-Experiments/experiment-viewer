@@ -1,0 +1,21 @@
+[
+  {
+    "monthCreated" : "1020",
+    "projects" : [
+      { "name" : "hello" },
+      { "name" : "interest" },
+      { "name" : "sum-of-digits" }
+    ],
+    "takeHome" : [
+      { "name" : "sphere-vol-area" },
+      { "name" : "centigrade-fahrenheit" },
+      { "name" : "seconds-to-time" },
+      { "name" : "even-odd" },
+      { "name" : "positive-negative" },
+      { "name" : "largest-of-three" },
+      { "name" : "grade-calculator" },
+      { "name" : "quadratic-roots" },
+      { "name" : "smallest-of-three" }
+    ]
+  }
+]
