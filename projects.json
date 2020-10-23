@@ -15,7 +15,13 @@
       { "name" : "largest-of-three" },
       { "name" : "grade-calculator" },
       { "name" : "quadratic-roots" },
-      { "name" : "smallest-of-three" }
+      { "name" : "smallest-of-three" },
+      { "name" : "sum-of-n" },
+      { "name" : "first-even-n" },
+      { "name" : "reverse" },
+      { "name" : "binary-to-decimal" },
+      { "name" : "fibonacci" },
+      { "name" : "multiplication-tables" },
     ]
   }
 ]
