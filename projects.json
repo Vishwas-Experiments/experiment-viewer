@@ -21,7 +21,7 @@
       { "name" : "reverse" },
       { "name" : "binary-to-decimal" },
       { "name" : "fibonacci" },
-      { "name" : "multiplication-tables" },
+      { "name" : "multiplication-tables" }
     ]
   }
 ]
