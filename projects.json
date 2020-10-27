@@ -3,10 +3,10 @@
     "monthCreated" : "1020",
     "projects" : [
       { "name" : "hello" },
-      { "name" : "interest" },
       { "name" : "sum-of-digits" }
     ],
     "takeHome" : [
+      { "name" : "interest" },
       { "name" : "sphere-vol-area" },
       { "name" : "centigrade-fahrenheit" },
       { "name" : "seconds-to-time" },
@@ -17,7 +17,7 @@
       { "name" : "quadratic-roots" },
       { "name" : "smallest-of-three" },
       { "name" : "sum-of-n" },
-      { "name" : "first-even-n" },
+      { "name" : "even-upto-n" },
       { "name" : "reverse" },
       { "name" : "binary-to-decimal" },
       { "name" : "fibonacci" },
